@@ -51,7 +51,7 @@ run check.sh,then it will print where malloc/realloc but without free,like this:
 every column present 
 %addr% %log line% %caller% %size%
 
-it means that code at 0xb7dae8a6/0xb7dae893/0xb7dae8a6,where malloc heap size fo 4696/252/ 51800 without free
+it means that code at 0xb7dae8a6/0xb7dae893/0xb7dae8a6,where malloc heap size of 4696/252/ 51800 without free
 
 
 ###Step 5.
