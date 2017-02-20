@@ -9,13 +9,15 @@ include memcheck.h in file
 ###Step 2.
 in main function,load `my_init()`;
 you can also print your own info,but make sure start with *
-
+```
+#include "memcheck.h"
     int main(){
     	my_init();
+        char* ptr= (char*)malloc(4696);
     	//to do
     	print("****start main****\n");
     }
-
+```
 
 ###Step 3.
 run program,make sure the the infomation printed on a log file, then modify the parameter $logs to your log file name in check.sh
@@ -25,7 +27,7 @@ run program,make sure the the infomation printed on a log file, then modify the 
 the logs will like:
 
 ```
-malloc 0x83c2128 from   0xb79b276f size 20
+malloc 0x83c2128 from   0x804b418 size 4696
 ****start main****
 malloc 0x83c2140 from   0xb79b29ad size 11
 free   0x83bf518 from   0x4ee876
@@ -56,8 +58,8 @@ it means that code at 0x804b418,where malloc heap size of 4696 without free
 use addr2line ,find the source line
 
 ```
-[cindyhua@dev-SpyTux-68 tool-memcheck]$addr2line -e ~/bin/ORACLE_SEL_MUTI -f 0x804b418
+[cindyhua@dev-SpyTux-68 tool-memcheck]$addr2line -e a.out -f 0x804b418
 main                       
-/main.c:8
+/main.c:4
 ```
 
