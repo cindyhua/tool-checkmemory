@@ -13,7 +13,7 @@ you can also print your own info,but make sure start with *
     int main(){
     	my_init();
     	//to do
-		print("****start main****\n");
+    	print("****start main****\n");
     }
 
 
