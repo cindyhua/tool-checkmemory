@@ -34,7 +34,7 @@ free   0x83bf518 from   0x4ee876
 free   0x83bd510 from   0xb79b26b8
 free   0x83bf680 from   0xb79b2fcc
 malloc 0x83bd510 from   0xb79b3da6 size  7
-realloc0x83bba60 from   0xb79c31be size117 oldptr   0x83bba60
+realloc0x83bba60 from   0xb79c31be size  117 oldptr  0x83bba60
 free   0x83bd510 from   0xb78ed599
 free   0x83bba50 from   0xb79c3b6a
 ```
